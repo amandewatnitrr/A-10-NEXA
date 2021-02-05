@@ -21,7 +21,7 @@ India has a significant shortage of trained physicians nationwide when compared 
 - To evolve, innovate and renovate the concept of Tele-medicine using IoT.
 - To promote technical job opportunities for people to work as authorized user of the MedIoT kit.
 
-## Solution :
+# **Solution :**
 
 ## **Sanjeevani**
 
