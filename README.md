@@ -1,4 +1,4 @@
-# A-10 | NEXA
+# **A-10 | NEXA**
 ## Track : App Development - Open Innovation
 
 ## Problem Statement :
@@ -14,3 +14,15 @@ Keeping in mind the above problems, A solution needs to be proposed that solves 
 India has a significant shortage of trained physicians nationwide when compared to the WHO recommended ratio. Additionally, with about 80 percent of the medical workforce concentrated in top 8-10 cities and serving only 28 percent of the total population, access to healthcare still remains an aspiration for many. In rural India, a patient may have to travel even about 122 kms to meet a doctor. The need of the hour is to provide good quality healthcare access to the rural and remote population as well.
 
 ## Objectives :
+- To connect patients in remote and rural areas with the best doctors of their choice.
+- To provide essential medical services at lowest possible cost.
+- To provide proper patient medical history management system.
+- To provide proper patient monitoring equipments in remote areas, where medical reach is hard or disconnected due to lack of connectivity.
+- To evolve, innovate and renovate the concept of Tele-medicine using IoT.
+- To promote technical job opportunities for people to work as authorized user of the MedIoT kit.
+
+## Solution :
+
+## **Sanjeevani**
+
+
