@@ -24,5 +24,6 @@ India has a significant shortage of trained physicians nationwide when compared 
 ## Solution :
 
 ## **Sanjeevani**
+Sanjeevani is an Android-IoT based Real-Time Health Monitoring and Medical Consultation System. The IoT systen is connected to the cloud that let’s the users keep real time check on some basic parameters like: Heart-Rate, Blood Pressure, Temperature, ECG Function, Glucose Level, Dissolved Oxygen Level etc. using Bio-Sensors that transmits the data to Firebase for storage in database and henceforth can be accessed by the authenticated person.
 
 
