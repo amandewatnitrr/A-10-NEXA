@@ -1,33 +1,71 @@
 {
   "project_info": {
-    "project_number": "676389535628",
-    "project_id": "sanjeevani-apscript",
-    "storage_bucket": "sanjeevani-apscript.appspot.com"
+    "project_number": "168392742098",
+    "firebase_url": "https://pocket-clinic-8d011.firebaseio.com",
+    "project_id": "pocket-clinic-8d011",
+    "storage_bucket": "pocket-clinic-8d011.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:676389535628:android:fd2c63521f149c56c560a9",
+        "mobilesdk_app_id": "1:168392742098:android:fcd9b102edcb10bca8490b",
         "android_client_info": {
-          "package_name": "com.example.sanjeevani"
+          "package_name": "com.example.pocketclinic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "676389535628-77usa6d7l532k5ogh685nsq2id8rrqt6.apps.googleusercontent.com",
+          "client_id": "168392742098-o939vfocehureuijrfal1cv2rb38hpf6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAFSpKgJezvGQO4Y9G7UDdipyG4XW8J3jc"
+          "current_key": "AIzaSyCiU34fRzMwA2ZmUJIkzct4XCR-7wQ9jiw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "676389535628-77usa6d7l532k5ogh685nsq2id8rrqt6.apps.googleusercontent.com",
+              "client_id": "168392742098-o939vfocehureuijrfal1cv2rb38hpf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168392742098:android:5792a4a99ff22ad0a8490b",
+        "android_client_info": {
+          "package_name": "com.example.sanjeevani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168392742098-q5scqghessv7nmet3a99kik9cnuoe5a9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanjeevani",
+            "certificate_hash": "908a109c2f91eb719989592b7ab497204482190f"
+          }
+        },
+        {
+          "client_id": "168392742098-o939vfocehureuijrfal1cv2rb38hpf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiU34fRzMwA2ZmUJIkzct4XCR-7wQ9jiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168392742098-o939vfocehureuijrfal1cv2rb38hpf6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

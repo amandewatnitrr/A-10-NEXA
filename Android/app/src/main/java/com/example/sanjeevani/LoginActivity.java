@@ -32,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin,btnReg;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
-    private DatabaseReference db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         FirebaseApp.initializeApp(this);
         initWidgets();
+        userIsLoggedIn();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,15 +69,24 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void register(String name, final String phone, final String email, final String password) {
+    private void userIsLoggedIn() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+            finish();
+            return;
+        }
+    }
+
+    private void register(final String name, final String phone, final String email, final String password) {
         progressBar.setVisibility(View.VISIBLE);
         auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+                    addtodb(name,phone);
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(LoginActivity.this, " User registered successfully !",Toast.LENGTH_SHORT).show();
-                    FirebaseUser user = auth.getCurrentUser();
                 }else{
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(LoginActivity.this, task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
@@ -93,8 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            addtodb(name,phone);
-                            FirebaseUser user = auth.getCurrentUser();
+                            //addtodb(name,phone);
                             progressBar.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "Success",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
@@ -109,9 +117,33 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void addtodb(String name, String phone) {
-        final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("user");
+    private void addtodb(final String name, final String phone) {
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            final DatabaseReference mUserDB = FirebaseDatabase.getInstance().getReference().child("user").child(user.getUid());
+            mUserDB.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(!dataSnapshot.exists()){
+                        Map<String, Object> userMap = new HashMap<>();
+                        userMap.put("phone", phone);
+                        userMap.put("name", name);
+                        mUserDB.updateChildren(userMap);
+                        Toast.makeText(LoginActivity.this,"Done",Toast.LENGTH_SHORT).show();
+                    }
+                    userIsLoggedIn();
+                }
 
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(LoginActivity.this,databaseError.getMessage().toString(),Toast.LENGTH_SHORT).show();
+                }
+            });
+            /*Map<String, Object> userMap = new HashMap<>();
+            userMap.put("phone", user.getPhoneNumber());
+            userMap.put("name", user.getPhoneNumber());
+            mUserDB.setValue(userMap);*/
+        }
     }
 
     private void initWidgets() {
@@ -124,7 +156,6 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
         auth = FirebaseAuth.getInstance();
-        db = FirebaseDatabase.getInstance().getReference();
     }
 
     private boolean validateInput(String name, String phone, String email, String password){
