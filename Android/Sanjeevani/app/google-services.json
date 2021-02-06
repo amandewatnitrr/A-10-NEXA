@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "676389535628",
+    "project_id": "sanjeevani-apscript",
+    "storage_bucket": "sanjeevani-apscript.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676389535628:android:fd2c63521f149c56c560a9",
+        "android_client_info": {
+          "package_name": "com.example.sanjeevani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676389535628-77usa6d7l532k5ogh685nsq2id8rrqt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFSpKgJezvGQO4Y9G7UDdipyG4XW8J3jc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676389535628-77usa6d7l532k5ogh685nsq2id8rrqt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
