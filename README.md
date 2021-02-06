@@ -54,7 +54,7 @@ pulse rate, and body temperature, etc, on a real-time basis.
 ## Tech Stacks to be used :
 - Native Android
 - Google Firebase
-- 
+- Internet of Things (IoT)
 
 ## Actual Connection of Sanjeevani-IoT:
 The Circuit structure consists of total 5 sensors which include an ECG Module, Pulse Oximeter, Temperature Sensor, Glucometer, Blood Pressure module connected to a Biometric Shield that receives manages all the sensors and is connected to Raspberry Pi. The Raspberry Pi is powered using a Common Laptop Battery System for operation and also connected to input device for user input. The Touch Screen is provided for interactive purpose. The user will only need to perform test on the patients and the data will be recorded. We have a GSM Module to ensure 24*7 connectivity to the internet. The data is sent to Ubidots for charting purpose and can be accessed directly using APIs.
