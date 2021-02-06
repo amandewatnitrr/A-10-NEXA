@@ -22,7 +22,11 @@ def update_firebase():
         #str_temp = ' {0:0.2f} *C '.temp    
         #str_pres  = ' {0:0.2f} %'.pres
         #str_alti = ' {0:0.2f} m'.alti
-        print('Temp={0:0.1f}*C  Pressure={1:0.1f}%  Altitude={1:0.1f}m'.format(sensor.read_temperature(), sensor.read_pressure()),sensor.read_altitude())    
+        print('Temp = {0:0.2f} *C'.format(sensor.read_temperature()))
+        print('Pressure = {0:0.2f} Pa'.format(sensor.read_pressure()))
+        print('Altitude = {0:0.2f} m'.format(sensor.read_altitude()))
+        print('Sealevel Pressure = {0:0.2f} Pa'.format(sensor.read_sealevel_pressure()))
+        print('\n')
               
     else:  
         print('Failed to get reading. Try again!')    
