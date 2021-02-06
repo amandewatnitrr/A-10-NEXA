@@ -86,13 +86,14 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void login(String name, String phone, String email, String password) {
+    private void login(final String name, final String phone, String email, String password) {
         progressBar.setVisibility(View.VISIBLE);
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            addtodb(name,phone);
                             FirebaseUser user = auth.getCurrentUser();
                             progressBar.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "Success",Toast.LENGTH_SHORT).show();
@@ -105,6 +106,11 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+    }
+
+    private void addtodb(String name, String phone) {
+        final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("user");
 
     }
 
