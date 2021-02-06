@@ -16,3 +16,7 @@
 
 Follow the instructions over here for connecting a BMP 180 and reading data from here ->
 https://thepihut.com/blogs/raspberry-pi-tutorials/18025084-sensors-pressure-temperature-and-altitude-with-the-bmp180
+
+## Initial Tests
+![Alt](https://github.com/amandewatnitrr/A-10-NEXA/blob/main/iot_apscript/2021-02-07-023358_1920x1080_scrot.png)
+![Alt](https://github.com/amandewatnitrr/A-10-NEXA/blob/main/iot_apscript/WhatsApp%20Image%202021-02-07%20at%2002.36.51.jpeg)
