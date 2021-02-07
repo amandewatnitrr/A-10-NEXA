@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.utils;
 
 import java.util.HashMap;
 import java.util.Map;

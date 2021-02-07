@@ -1,13 +1,18 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
+import com.example.sanjeevani.adapters.ChatListAdapter;
+import com.example.sanjeevani.R;
+import com.example.sanjeevani.models.ChatObject;
+import com.example.sanjeevani.models.UserObject;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -121,6 +126,7 @@ public class ChatListActivity extends AppCompatActivity {
         });
     }
 
+    @SuppressLint("WrongConstant")
     private void initializeRecyclerView() {
         chatList = new ArrayList<>();
         mChatList= findViewById(R.id.chatList);

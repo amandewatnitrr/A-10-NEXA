@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.sanjeevani.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
@@ -47,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         btnDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,DoctorActivity.class);
+                Intent intent = new Intent(HomeActivity.this, DoctorActivity.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         btnIOT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,IotActivity.class);
+                Intent intent = new Intent(HomeActivity.this, IotActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.sanjeevani.R;
+import com.example.sanjeevani.models.UserObject;
 
 import java.util.ArrayList;
 

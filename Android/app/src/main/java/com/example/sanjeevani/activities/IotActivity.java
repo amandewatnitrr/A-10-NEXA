@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sanjeevani.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -17,8 +18,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import org.w3c.dom.Text;
 
 public class IotActivity extends AppCompatActivity {
 
@@ -53,7 +52,7 @@ public class IotActivity extends AppCompatActivity {
                     if (name!=null){
                         valname.setText(name);
                     }else {
-                        valname.setText("Shruti Rawal");
+                        valname.setText("Loading...");
                     }
                 }
 

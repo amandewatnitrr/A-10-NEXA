@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +14,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.sanjeevani.adapters.MessageAdapter;
+import com.example.sanjeevani.R;
+import com.example.sanjeevani.models.ChatObject;
+import com.example.sanjeevani.models.MessageObject;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

@@ -1,4 +1,6 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.models;
+
+import com.example.sanjeevani.models.UserObject;
 
 import java.io.Serializable;
 import java.util.ArrayList;

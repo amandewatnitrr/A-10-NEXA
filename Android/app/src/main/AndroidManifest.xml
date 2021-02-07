@@ -13,12 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChatListActivity"></activity>
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".IotActivity" />
-        <activity android:name=".DoctorActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.ChatListActivity"></activity>
+        <activity android:name=".activities.ChatActivity" />
+        <activity android:name=".activities.IotActivity" />
+        <activity android:name=".activities.DoctorActivity" />
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

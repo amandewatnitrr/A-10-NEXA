@@ -1,10 +1,13 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.sanjeevani.R;
+import com.example.sanjeevani.models.MessageObject;
 
 import java.util.ArrayList;
 

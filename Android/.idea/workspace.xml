@@ -10,8 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cb455b3-a6be-4991-8938-779c8a5b0361" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/IotActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/IotActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/activities/IotActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/ChatActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/activities/ChatActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/ChatListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/activities/ChatListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/ChatListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/adapters/ChatListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/ChatObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/models/ChatObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/CountryToPhonePrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/utils/CountryToPhonePrefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/DoctorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/activities/DoctorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/activities/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/IotActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/activities/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/MessageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/adapters/MessageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/MessageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/models/MessageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/UserListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/adapters/UserListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/UserObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sanjeevani/models/UserObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_doctor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_doctor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_iot.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_iot.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
