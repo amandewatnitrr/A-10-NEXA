@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.models;
 
 public class MessageObject {
     String messageId,

@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.sanjeevani.utils.CountryToPhonePrefix;
+import com.example.sanjeevani.R;
+import com.example.sanjeevani.adapters.UserListAdapter;
+import com.example.sanjeevani.models.UserObject;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

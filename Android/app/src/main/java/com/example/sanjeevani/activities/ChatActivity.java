@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +14,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.sanjeevani.adapters.MessageAdapter;
+import com.example.sanjeevani.R;
+import com.example.sanjeevani.models.ChatObject;
+import com.example.sanjeevani.models.MessageObject;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -81,57 +85,19 @@ public class ChatActivity extends AppCompatActivity {
         if(!mMessage.getText().toString().isEmpty())
             newMessageMap.put("text", mMessage.getText().toString());
 
-
-        /*if(!mediaUriList.isEmpty()){
-            for (String mediaUri : mediaUriList){
-                String mediaId = newMessageDb.child("media").push().getKey();
-                mediaIdList.add(mediaId);
-                final StorageReference filePath = FirebaseStorage.getInstance().getReference().child("chat").child(chatID).child(messageId).child(mediaId);
-
-                UploadTask uploadTask = filePath.putFile(Uri.parse(mediaUri));
-
-                uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        filePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                newMessageMap.put("/media/" + mediaIdList.get(totalMediaUploaded) + "/", uri.toString());
-
-                                totalMediaUploaded++;
-                                if(totalMediaUploaded == mediaUriList.size())
-                                    updateDatabaseWithNewMessage(newMessageDb, newMessageMap);
-
-                            }
-                        });
-                    }
-                });
-            }
-        }else{*/
         if(!mMessage.getText().toString().isEmpty())
             updateDatabaseWithNewMessage(newMessageDb, newMessageMap);
-        //}
 
     }
 
     private void updateDatabaseWithNewMessage(DatabaseReference newMessageDb, Map newMessageMap){
         newMessageDb.updateChildren(newMessageMap);
         mMessage.setText(null);
-        /*mediaUriList.clear();
-        mediaIdList.clear();
-        totalMediaUploaded=0;
-        mMediaAdapter.notifyDataSetChanged();*/
         String message;
         if(newMessageMap.get("text") != null)
             message = newMessageMap.get("text").toString();
         else
             Toast.makeText(ChatActivity.this,"Try again",Toast.LENGTH_SHORT).show();
-        //  message = "Sent Media";
-        //for(UserObject mUser : mChatObject.getUserObjectArrayList()){
-        //  if(!mUser.getUid().equals(FirebaseAuth.getInstance().getUid())){
-        //    new SendNotification(message, "New Message", mUser.getNotificationKey());
-        //}
-        //}
 
     }
 

@@ -1,4 +1,4 @@
-package com.example.sanjeevani;
+package com.example.sanjeevani.adapters;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.sanjeevani.R;
+import com.example.sanjeevani.activities.ChatActivity;
+import com.example.sanjeevani.models.ChatObject;
 
 import java.io.Serializable;
 import java.util.ArrayList;

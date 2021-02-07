@@ -9,9 +9,9 @@
 1. Thony Python IDE
 
 ## Libraries
-1. firebase
+1. Google Firebase
 2. python-firebase
-3. gcloud
+3. G-Cloud
 4. functools
 
 (** Medical based sensors due to immediate unavailability were not used, though you can use as many sensors as you want along with a Bio-Shield Sensor that allows you to connect bio-sensors easily and read data from them.)
