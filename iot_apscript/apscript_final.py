@@ -14,9 +14,9 @@ from firebase import firebase
 #firebase = pyrebase.initialize_app(config)
 
 from firebase.firebase import FirebaseAuthentication
-DSN = 'https://sanjeevani-apscript-default-rtdb.firebaseio.com' # 'https://myapp.firebaseio.com/'
+DSN = 'https://sanjeevani-apscript-default-rtdb.firebaseio.com'
 SECRET = 'mail_id_password' # 'secretkey'
-EMAIL ='mail_id' # 'prateekrai266@gmail.com'
+EMAIL ='mail_id' # 
 
 authentication = FirebaseAuthentication(SECRET,EMAIL, True, True)
 
