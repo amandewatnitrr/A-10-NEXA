@@ -15,8 +15,8 @@ from firebase import firebase
 
 from firebase.firebase import FirebaseAuthentication
 DSN = 'https://sanjeevani-apscript-default-rtdb.firebaseio.com' # 'https://myapp.firebaseio.com/'
-SECRET = 'shruti7376036196' # 'secretkey'
-EMAIL ='shruti456rawal@gmail.com' # 'prateekrai266@gmail.com'
+SECRET = 'mail_id_password' # 'secretkey'
+EMAIL ='mail_id' # 'prateekrai266@gmail.com'
 
 authentication = FirebaseAuthentication(SECRET,EMAIL, True, True)
 
