@@ -9,9 +9,9 @@
 1. Thony Python IDE
 
 ## Libraries
-1. firebase
+1. Google Firebase
 2. python-firebase
-3. gcloud
+3. G-Cloud
 4. functools
 
 Follow the instructions over here for connecting a BMP 180 and reading data from here ->
