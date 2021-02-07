@@ -30,7 +30,6 @@ public class IotActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iot);
         initialiseWidgets();
-        //fetchName();
         btnstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,29 +40,8 @@ public class IotActivity extends AppCompatActivity {
     }
 
     private void fetchName() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user!=null){
-            final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("user").child(user.getUid());
-            ref.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    progress.setVisibility(View.GONE);
-                    String name = snapshot.child("name").getValue(String.class);
-                    if (name!=null){
-                        valname.setText(name);
-                    }else {
-                        valname.setText("Loading...");
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                    Toast.makeText(IotActivity.this,"Error",Toast.LENGTH_SHORT).show();
-                }
-            });
-        }else{
-            Toast.makeText(IotActivity.this,"User not found",Toast.LENGTH_SHORT).show();
-        }
+        Toast.makeText(IotActivity.this,"CAme",Toast.LENGTH_SHORT).show();
+        progress.setVisibility(View.GONE);
     }
 
     private void initialiseWidgets() {

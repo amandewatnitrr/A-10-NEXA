@@ -81,7 +81,7 @@ public class DoctorActivity extends AppCompatActivity {
         if(validChat){
             chatInfoDb.updateChildren(newChatMap);
             userDb.child(FirebaseAuth.getInstance().getUid()).child("chat").child(key).setValue(true);
-            Intent intent = new Intent(DoctorActivity.this, ChatListActivity.class);
+            Intent intent = new Intent(DoctorActivity.this,ChatListActivity.class);
             startActivity(intent);
         }
 
