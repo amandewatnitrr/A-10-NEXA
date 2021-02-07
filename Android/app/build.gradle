@@ -5,10 +5,16 @@ android {
     compileSdkVersion 29
     buildToolsVersion "30.0.1"
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "com.example.sanjeevani"
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 24
+        multiDexEnabled true
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -39,4 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.+') { transitive = true }
+    implementation 'com.android.support:multidex:1.0.3'
+
 }

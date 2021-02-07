@@ -7,7 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.sanjeevani.adapters.ChatListAdapter;
 import com.example.sanjeevani.R;
@@ -20,6 +24,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
 import java.util.ArrayList;
 
 public class ChatListActivity extends AppCompatActivity {
@@ -28,14 +35,33 @@ public class ChatListActivity extends AppCompatActivity {
     private RecyclerView.Adapter mChatListAdapter;
     private RecyclerView.LayoutManager mChatListLayoutManager;
 
+    private EditText txtCode;
+    private Button btnjoin;
+
     ArrayList<ChatObject> chatList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_list);
+        txtCode = (EditText)findViewById(R.id.code);
+        btnjoin = (Button)findViewById(R.id.join);
         initializeRecyclerView();
         getUserChatList();
+        btnjoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String code = txtCode.getText().toString();
+                if (code!=null && code.length()>0){
+                    startmeet(code);
+                }
+            }
+        });
+    }
+
+    private void startmeet(String code){
+        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder().setRoom(code).setWelcomePageEnabled(false).build();
+        JitsiMeetActivity.launch(ChatListActivity.this,options);
     }
 
     private void getUserChatList(){
