@@ -14,6 +14,17 @@
 3. G-Cloud
 4. functools
 
+## For installing all the required libraries:
+<ol>
+  <li>Clone the repository.</li>
+  <li>Move to iot_apscript folder.</li>
+  <li>Use the command given below to install the libraries mentioned in requirements.txt:</li>
+  <ul>
+      <li>python -m pip install -r requirements.txt
+  </ul>
+</ol>
+
+
 (** Medical based sensors due to immediate unavailability were not used, though you can use as many sensors as you want along with a Bio-Shield Sensor that allows you to connect bio-sensors easily and read data from them.)
 
 Follow the instructions over here for connecting a BMP 180 and reading data from here ->
