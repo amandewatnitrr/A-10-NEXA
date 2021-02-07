@@ -14,6 +14,8 @@
 3. G-Cloud
 4. functools
 
+(** Medical based sensors due to immediate unavailability were not used, though you can use as many sensors as you want along with a Bio-Shield Sensor that allows you to connect bio-sensors easily and read data from them.)
+
 Follow the instructions over here for connecting a BMP 180 and reading data from here ->
 https://thepihut.com/blogs/raspberry-pi-tutorials/18025084-sensors-pressure-temperature-and-altitude-with-the-bmp180
 
