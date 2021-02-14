@@ -35,13 +35,46 @@ public class IotActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progress.setVisibility(View.VISIBLE);
                 fetchName();
+                fetchTemp();
+                progress.setVisibility(View.GONE);
             }
         });
     }
 
+    private void fetchTemp() {
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null){
+            FirebaseDatabase.getInstance().getReference().child("sensor").child("dht").child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String name = snapshot.child("temp").getValue(String.class);
+                    valtemp.setText(name);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
+    }
+
     private void fetchName() {
-        Toast.makeText(IotActivity.this,"CAme",Toast.LENGTH_SHORT).show();
-        progress.setVisibility(View.GONE);
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null){
+            FirebaseDatabase.getInstance().getReference().child("user").child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String name = snapshot.child("name").getValue(String.class);
+                    valname.setText(name);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
     }
 
     private void initialiseWidgets() {
