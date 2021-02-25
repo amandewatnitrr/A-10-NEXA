@@ -1,4 +1,7 @@
 # **A-10 | NEXA**
+<div>
+<img align="centre" src="https://github.com/amandewatnitrr/A-10-NEXA/blob/main/Hackathon.png" width="40%"/>
+</div>
 ## Track : App Development - Open Innovation
 
 ## Problem Statement :
